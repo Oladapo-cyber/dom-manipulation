@@ -8,12 +8,29 @@
     <script type="module" defer src="./index.js"></script>
   </head>
   <body>
+    <div id="container">
+      <p class="full-text">
+        <i id="italics">Some italicized text</i>
+      </p>
+      A text node
+      <p>Some paragraph</p>
+      <!-- This is a comment -->
+      <span>Span Element</span>
+    </div>
+
+    <button id="myButton">Click Here</button>
+    <button ondblclick="alert(`You've clicked the button twice!`)">
+      New Order
+    </button>
+    <h1 class="texts header-styles">Styling elements with JavaScript</h1>
     <p>
       <b>Innertext Example</b>
       <span id="inner-text"></span>
     </p>
 
     <hr />
+
+    <p class="food nigerian jollof" id="jollof">What would you like to eat?</p>
 
     <p>
       <b>textContent Example</b>
@@ -37,5 +54,7 @@
     <p id="topic">JS array methods</p>
     <p id="first-method">map</p>
     <p id="second-method">filter</p>
+
+    <img src="image.jpg" alt="An example image" />
   </body>
 </html>
