@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //Used to select elements by id~
+  //Used to select elements by id
   const titleElement = document.getElementById("page-title");
 
   titleElement.style.backgroundColor = "blue";
@@ -125,4 +125,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   header.oncopy = () => alert("You copied the header text!");
+
+  //Below is the javascript for the challenge
+  const giftBox = document.getElementById("gift-box");
+  const showButton = document.getElementById("click-btn");
+
+  console.log(giftBox);
+  console.log(showButton);
+
+  //Below is my solution to show the giftbox.
+  // document.addEventListener("click", () => {
+  //   showButton.click = giftBox.style.display = "block";
+  // });
+
+  //Below is my instructor solution for this.
+  showButton.addEventListener("click", () => {
+    //The 2 commented code in this eventlistener only
+    //giftBox.style.display = "block";
+    //giftBox.classList = "";
+    giftBox.classList.toggle("hide");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    console.log(e.ctrlKey, e.key);
+    if (e.ctrlKey && e.key === "y") {
+      giftBox.classList.toggle("hide");
+    }
+  });
 });
